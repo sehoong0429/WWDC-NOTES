@@ -229,6 +229,46 @@ final class Box<T> {
     }
 }
 ```
+User 구조체 저장
+```swift
+struct User: Equatable {
+    var username: String
+}
+
+let user = User(username: "twostraws")
+let box1 = Box(value: user)
+let box2 = Box(value: user)
+```
+
+```swift
+extension Box: Equatable where T: Equatable {
+    static func == (lhs: Box<T>, rhs: Box<T>) -> Bool {
+        return lhs.value == rhs.value
+    }
+}
+```
+
+두 개의 상자 직접 선택 가능
+```
+box1 == box2
+```
+
+# Recursie COnstraints
+```swift
+protocol Collection {
+  associatedTyppe Element
+  associatedType Index
+  associatedType SubSequence: Collection
+  	where SubSequence.Element == Element,
+  				SubSequence.Index == Index,
+  				SubSequence.SubSequence == SubSequence
+}
+```
 
 
+- 리스코프 치환 원칙을 잘 생각하기
+
+- 프로토콜을 채택도 서브 클래스에 상속된다.
+
+- required initializer는 반드시 모든 서브 클래스에서 구현되어야 한다.
 
