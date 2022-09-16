@@ -253,7 +253,7 @@ extension Box: Equatable where T: Equatable {
 box1 == box2
 ```
 
-# Recursie COnstraints
+# Recursive Constraints
 ```swift
 protocol Collection {
   associatedTyppe Element
@@ -265,7 +265,7 @@ protocol Collection {
 }
 ```
 
-
+### 마무리
 - 리스코프 치환 원칙을 잘 생각하기
 
 - 프로토콜을 채택도 서브 클래스에 상속된다.
