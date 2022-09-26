@@ -43,7 +43,7 @@ protocol Collection : Sequence {
 ```swift
 extension Collection {
   func everyOther(_ body: (Element) -> Void) {
-    let start = self.startInde
+    let start = self.startIndex
     let end = self.endIndex
       
     var iter = start
