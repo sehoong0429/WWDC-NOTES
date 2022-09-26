@@ -141,7 +141,7 @@ func increment(x: Int) -> Int {
 }
 
 let array = Array(0..<10)
-let inc/array = array.map(increment)
+let incArray = array.map(increment)
 print("Result:")
 print(incArray[0], incArray[4])
     
