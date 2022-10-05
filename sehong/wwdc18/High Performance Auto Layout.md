@@ -12,11 +12,12 @@
 
 ### The Reder Loop 
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/67987230/193951201-cc47c799-a25b-498e-af78-e378284d6b47.png">
+
 - What is updateConstraints?
      - Update Constraint 함수는 Render loop에 속함
 - 초당 120 프레임을 실행
 - 병렬적으로 이루어짐 
 - 실제로 필요한 경우(중복 작업 피하기)에 유용 
 - 작성하는 빈도를 최소화
-      - 1초마다 120번 실행되기 때문에 계속 constraint를 만들었다 없앴다 하지말고 한번만 생성되도록!
+     - 1초마다 120번 실행되기 때문에 계속 constraint를 만들었다 없앴다 하지말고 한번만 생성되도록!
 - Interface Builder를 사용할 수 있으면 최대한 Interface Builder를 사용하기 
